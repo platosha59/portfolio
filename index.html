@@ -17,7 +17,7 @@
         }
 
         /* ─────────────────────────────
-           NAV
+           BLOCK 1 — NAV + HERO
         ───────────────────────────── */
         nav {
             display: flex;
@@ -67,9 +67,6 @@
             color: #fff;
         }
 
-        /* ─────────────────────────────
-           HERO
-        ───────────────────────────── */
         .hero {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -232,7 +229,6 @@
             letter-spacing: 0.04em;
         }
 
-        /* RIGHT */
         .hero-right {
             position: relative;
             height: 580px;
@@ -374,20 +370,18 @@
             color: #1A1A1A;
         }
 
-        .section-num-hero {
-            position: absolute;
-            bottom: 40px;
-            left: 60px;
+        .section-num-label {
             font-size: 11px;
             font-weight: 700;
             letter-spacing: 0.1em;
             color: #1A1A1A;
             opacity: 0.25;
             text-transform: uppercase;
+            padding: 0 60px 40px;
         }
 
         /* ─────────────────────────────
-           WHAT I DO
+           BLOCK 2 — КОМПЕТЕНЦИИ
         ───────────────────────────── */
         .what-i-do {
             padding: 100px 60px;
@@ -609,266 +603,7 @@
         }
 
         /* ─────────────────────────────
-           ABOUT
-        ───────────────────────────── */
-        .about {
-            background: #141414;
-            padding: 90px 60px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .about::before {
-            content: '';
-            position: absolute;
-            top: -120px;
-            right: -120px;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(200,57,43,0.12) 0%, transparent 70%);
-            pointer-events: none;
-        }
-
-        .about-inner {
-            max-width: 1280px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 72px;
-        }
-
-        .about-section-num {
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 0.16em;
-            color: #C8392B;
-            text-transform: uppercase;
-        }
-
-        .main-row {
-            display: grid;
-            grid-template-columns: 1fr auto 1fr;
-            gap: 64px;
-            align-items: start;
-        }
-
-        .about-left {
-            display: flex;
-            flex-direction: column;
-            gap: 32px;
-            padding-top: 8px;
-        }
-
-        .about-title {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(40px, 4.5vw, 62px);
-            font-weight: 700;
-            color: #fff;
-            line-height: 1.1;
-            letter-spacing: -0.02em;
-        }
-
-        .about-title em {
-            font-style: italic;
-            color: #C8392B;
-        }
-
-        .about-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .about-tag {
-            font-size: 11px;
-            font-weight: 600;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            color: rgba(255,255,255,0.45);
-            border: 1px solid rgba(255,255,255,0.12);
-            padding: 6px 14px;
-            border-radius: 100px;
-        }
-
-        .about-photo-wrap {
-            width: 280px;
-            flex-shrink: 0;
-            position: relative;
-        }
-
-        .about-photo {
-            width: 100%;
-            aspect-ratio: 3/4;
-            object-fit: cover;
-            border-radius: 16px;
-            display: block;
-            filter: grayscale(15%);
-            background: #2a2a2a;
-        }
-
-        .photo-badge {
-            position: absolute;
-            bottom: 20px;
-            left: -20px;
-            background: #C8392B;
-            color: #fff;
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            padding: 10px 16px;
-            border-radius: 8px;
-            white-space: nowrap;
-        }
-
-        .about-right {
-            display: flex;
-            flex-direction: column;
-            gap: 32px;
-            padding-top: 8px;
-        }
-
-        .about-text-block {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            padding-bottom: 32px;
-            border-bottom: 1px solid rgba(255,255,255,0.08);
-        }
-
-        .about-text-label {
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            color: rgba(255,255,255,0.3);
-        }
-
-        .about-text {
-            font-size: 15px;
-            color: rgba(255,255,255,0.65);
-            line-height: 1.75;
-        }
-
-        .about-text strong {
-            color: rgba(255,255,255,0.9);
-            font-weight: 600;
-        }
-
-        .values-list {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .value-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .value-dot {
-            width: 5px;
-            height: 5px;
-            border-radius: 50%;
-            background: #C8392B;
-            flex-shrink: 0;
-        }
-
-        .value-text {
-            font-size: 14px;
-            color: rgba(255,255,255,0.55);
-            letter-spacing: 0.01em;
-        }
-
-        .about-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 13px;
-            font-weight: 700;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: #fff;
-            text-decoration: none;
-            margin-top: 8px;
-            align-self: flex-start;
-            position: relative;
-            padding-bottom: 4px;
-        }
-
-        .about-cta::after {
-            content: '';
-            position: absolute;
-            bottom: 0; left: 0;
-            width: 100%;
-            height: 1px;
-            background: rgba(255,255,255,0.3);
-            transition: background 0.2s;
-        }
-
-        .about-cta:hover::after { background: #C8392B; }
-
-        .cta-arrow {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            border: 1px solid rgba(255,255,255,0.25);
-            font-size: 13px;
-            transition: background 0.2s, border-color 0.2s;
-        }
-
-        .about-cta:hover .cta-arrow {
-            background: #C8392B;
-            border-color: #C8392B;
-        }
-
-        .divider {
-            height: 1px;
-            background: rgba(255,255,255,0.07);
-        }
-
-        .stats-row {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 40px;
-        }
-
-        .stat-item {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .stat-value {
-            font-family: 'Playfair Display', serif;
-            font-size: 52px;
-            font-weight: 700;
-            color: #C8392B;
-            line-height: 1;
-            letter-spacing: -0.02em;
-        }
-
-        .stat-sup {
-            font-family: 'Inter', sans-serif;
-            font-size: 22px;
-            font-weight: 800;
-            vertical-align: super;
-            color: #C8392B;
-        }
-
-        .stat-label-about {
-            font-size: 13px;
-            color: rgba(255,255,255,0.4);
-            letter-spacing: 0.03em;
-            line-height: 1.4;
-        }
-
-        /* ─────────────────────────────
-           PROJECTS
+           BLOCK 3 — PROJECTS
         ───────────────────────────── */
         .projects-section {
             padding: 100px 60px;
@@ -1013,4 +748,211 @@
             transition: filter 0.4s ease, transform 0.5s ease;
         }
 
-        .project
+        .project-card:hover .card-image img {
+            filter: grayscale(30%);
+            transform: scale(1.04);
+        }
+
+        .card-image::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, rgba(245,240,232,0.15), transparent);
+            pointer-events: none;
+        }
+
+        /* ─────────────────────────────
+           BLOCK 4 — FOOTER
+        ───────────────────────────── */
+        .footer-section {
+            background: #141414;
+            color: #fff;
+        }
+
+        .footer-section-num {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            color: rgba(255,255,255,0.2);
+            text-transform: uppercase;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 80px 60px 0;
+        }
+
+        .closing {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 48px 60px 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .closing-title {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: clamp(36px, 4.5vw, 64px);
+            line-height: 1.1;
+            color: #fff;
+            letter-spacing: -0.02em;
+            margin-bottom: 32px;
+        }
+
+        .closing-title span {
+            color: #C8392B;
+            font-style: italic;
+        }
+
+        .closing-desc {
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 1.8;
+            color: rgba(255,255,255,0.4);
+            max-width: 360px;
+        }
+
+        .abstract-wrap {
+            position: relative;
+            width: calc(100% + 60px);
+            aspect-ratio: 1/1;
+            margin-right: -60px;
+        }
+
+        canvas {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .abstract-wrap::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(to right, #141414 0%, #141414 8%, transparent 42%),
+                linear-gradient(to bottom, #141414 0%, transparent 30%),
+                linear-gradient(to top, #141414 0%, transparent 30%),
+                linear-gradient(to left, #141414 0%, transparent 20%);
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .footer-wrap {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 60px;
+        }
+
+        .footer-divider {
+            height: 1px;
+            background: rgba(255,255,255,0.07);
+            margin-top: 80px;
+        }
+
+        .footer {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            padding: 36px 0 52px;
+            gap: 20px;
+        }
+
+        .footer-label {
+            font-size: 9px;
+            font-weight: 600;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.25);
+            margin-bottom: 8px;
+        }
+
+        .footer-value {
+            font-size: 13px;
+            font-weight: 400;
+            color: #C8392B;
+            text-decoration: none;
+            letter-spacing: 0.01em;
+            transition: color 0.2s;
+            display: block;
+        }
+
+        .footer-value:hover { color: #E04030; }
+
+        .footer-name {
+            font-size: 13px;
+            font-weight: 500;
+            color: rgba(255,255,255,0.85);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ═══════════════════════════════
+         BLOCK 1 — NAV + HERO
+    ═══════════════════════════════ -->
+    <nav>
+        <div class="nav-logo">AP</div>
+        <ul class="nav-links">
+            <li><a href="#projects">Кейсы</a></li>
+            <li><a href="#competencies">Обо мне</a></li>
+            <li><a href="#footer-section">Контакты</a></li>
+        </ul>
+        <a href="mailto:platosha0519@gmail.com" class="nav-contact">Связаться</a>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-left">
+            <div class="hero-tag">UX/UI Designer</div>
+            <h1 class="hero-name">
+                Anna<br>Plato<span>.</span>nova
+            </h1>
+            <div class="hero-role">B2B Products · Web Apps</div>
+            <div class="hero-tags">
+                <span class="tag-pill">Figma</span>
+                <span class="tag-pill">Design Systems</span>
+                <span class="tag-pill">Research</span>
+            </div>
+            <div class="hero-divider"></div>
+            <p class="hero-desc">
+                Проектирую <strong>цифровые продукты</strong>,
+                которые решают реальные задачи бизнеса —
+                от концепции до готового интерфейса.
+            </p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn-primary">
+                    Смотреть кейсы
+                    
+                        
+                    
+                </a>
+                <a href="#" class="btn-secondary">Скачать резюме</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number">12<span>+</span></div>
+                    <div class="stat-label">Проектов</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">3<span>г</span></div>
+                    <div class="stat-label">Опыта</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">8<span>+</span></div>
+                    <div class="stat-label">Клиентов</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-right">
+            <div class="badge-float">
+                <div class="badge-dot"></div>
+                <span class="badge-text">Открыта к работе</span>
+            </div>
+            <div class="mockup-card card-1">
+                <div class="card-inner">
+                    <div class="card-bar full"></div>
+                    <div
