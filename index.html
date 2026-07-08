@@ -16,14 +16,18 @@
             color: #1A1A1A;
         }
 
-        /* ─────────────────────────────
-           BLOCK 1 — NAV + HERO
-        ───────────────────────────── */
+        /* ─────────────────────────────────────────
+           NAV
+        ───────────────────────────────────────── */
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 28px 60px;
+            background: #F5F0E8;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         .nav-logo {
@@ -67,6 +71,9 @@
             color: #fff;
         }
 
+        /* ─────────────────────────────────────────
+           HERO
+        ───────────────────────────────────────── */
         .hero {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -74,6 +81,8 @@
             padding: 40px 60px 80px;
             gap: 40px;
             min-height: calc(100vh - 90px);
+            max-width: 1280px;
+            margin: 0 auto;
         }
 
         .hero-left {
@@ -207,11 +216,7 @@
             border-top: 1px solid rgba(0,0,0,0.1);
         }
 
-        .stat {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-        }
+        .stat { display: flex; flex-direction: column; gap: 4px; }
 
         .stat-number {
             font-size: 28px;
@@ -229,6 +234,7 @@
             letter-spacing: 0.04em;
         }
 
+        /* RIGHT */
         .hero-right {
             position: relative;
             height: 580px;
@@ -242,29 +248,23 @@
         }
 
         .card-1 {
-            width: 340px;
-            height: 420px;
-            top: 30px;
-            right: 20px;
+            width: 340px; height: 420px;
+            top: 30px; right: 20px;
             background: #E8E0D5;
             transform: rotate(2deg);
         }
 
         .card-2 {
-            width: 280px;
-            height: 340px;
-            top: 80px;
-            left: 20px;
+            width: 280px; height: 340px;
+            top: 80px; left: 20px;
             background: #D4C9B8;
             transform: rotate(-3deg);
             z-index: 2;
         }
 
         .card-3 {
-            width: 200px;
-            height: 130px;
-            bottom: 20px;
-            right: 60px;
+            width: 200px; height: 130px;
+            bottom: 20px; right: 60px;
             background: #1A1A1A;
             z-index: 3;
             transform: rotate(1deg);
@@ -277,43 +277,27 @@
         }
 
         .card-inner {
-            width: 100%;
-            height: 100%;
+            width: 100%; height: 100%;
             display: flex;
             flex-direction: column;
             gap: 12px;
             padding: 20px;
         }
 
-        .card-bar {
-            height: 10px;
-            border-radius: 100px;
-            background: rgba(0,0,0,0.12);
-        }
-
+        .card-bar { height: 10px; border-radius: 100px; background: rgba(0,0,0,0.12); }
         .card-bar.short  { width: 60%; }
         .card-bar.medium { width: 80%; }
         .card-bar.full   { width: 100%; }
 
-        .card-rect {
-            flex: 1;
-            border-radius: 8px;
-            background: rgba(0,0,0,0.08);
-        }
+        .card-rect { flex: 1; border-radius: 8px; background: rgba(0,0,0,0.08); }
 
         .card-row { display: flex; gap: 8px; }
 
         .card-sq {
-            width: 48px;
-            height: 48px;
+            width: 48px; height: 48px;
             border-radius: 8px;
             background: rgba(0,0,0,0.1);
         }
-
-        .card-1 .card-bar { background: rgba(0,0,0,0.1); }
-        .card-1 .card-rect { background: rgba(0,0,0,0.07); }
-        .card-2 .card-bar { background: rgba(0,0,0,0.13); }
-        .card-2 .card-rect { background: rgba(0,0,0,0.09); }
 
         .card-3-label {
             font-size: 10px;
@@ -339,8 +323,7 @@
 
         .badge-float {
             position: absolute;
-            top: 10px;
-            left: 10px;
+            top: 10px; left: 10px;
             background: #fff;
             border-radius: 100px;
             padding: 8px 16px;
@@ -352,8 +335,7 @@
         }
 
         .badge-dot {
-            width: 8px;
-            height: 8px;
+            width: 8px; height: 8px;
             border-radius: 50%;
             background: #22C55E;
             animation: pulse 2s infinite;
@@ -361,28 +343,14 @@
 
         @keyframes pulse {
             0%, 100% { opacity: 1; }
-            50% { opacity: 0.4; }
+            50%       { opacity: 0.4; }
         }
 
-        .badge-text {
-            font-size: 12px;
-            font-weight: 600;
-            color: #1A1A1A;
-        }
+        .badge-text { font-size: 12px; font-weight: 600; color: #1A1A1A; }
 
-        .section-num-label {
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 0.1em;
-            color: #1A1A1A;
-            opacity: 0.25;
-            text-transform: uppercase;
-            padding: 0 60px 40px;
-        }
-
-        /* ─────────────────────────────
-           BLOCK 2 — КОМПЕТЕНЦИИ
-        ───────────────────────────── */
+        /* ─────────────────────────────────────────
+           COMPETENCIES
+        ───────────────────────────────────────── */
         .what-i-do {
             padding: 100px 60px;
             max-width: 1280px;
@@ -396,7 +364,7 @@
             margin-bottom: 64px;
         }
 
-        .section-num {
+        .section-num-label {
             font-size: 11px;
             font-weight: 700;
             letter-spacing: 0.16em;
@@ -405,7 +373,7 @@
             margin-bottom: 14px;
         }
 
-        .section-title {
+        .section-title-large {
             font-size: clamp(40px, 5vw, 72px);
             font-weight: 800;
             letter-spacing: -0.03em;
@@ -444,8 +412,7 @@
             content: '';
             position: absolute;
             left: 0; top: 0;
-            height: 100%;
-            width: 0;
+            height: 100%; width: 0;
             background: rgba(0,0,0,0.025);
             transition: width 0.3s ease;
         }
@@ -519,10 +486,7 @@
             color: rgba(255,255,255,0.3);
         }
 
-        .principles-list {
-            display: flex;
-            flex-direction: column;
-        }
+        .principles-list { display: flex; flex-direction: column; }
 
         .principle-item {
             display: flex;
@@ -535,7 +499,7 @@
         }
 
         .principle-item:first-child { padding-top: 0; }
-        .principle-item:last-child { border-bottom: none; padding-bottom: 0; }
+        .principle-item:last-child  { border-bottom: none; padding-bottom: 0; }
         .principle-item:hover { padding-left: 8px; }
 
         .principle-name {
@@ -602,16 +566,16 @@
             color: rgba(255,255,255,0.85);
         }
 
-        /* ─────────────────────────────
-           BLOCK 3 — PROJECTS
-        ───────────────────────────── */
-        .projects-section {
+        /* ─────────────────────────────────────────
+           SELECTED PROJECTS
+        ───────────────────────────────────────── */
+        .selected-projects {
             padding: 100px 60px;
             max-width: 1280px;
             margin: 0 auto;
         }
 
-        .projects-section-num {
+        .section-num-sp {
             font-size: 11px;
             font-weight: 700;
             letter-spacing: 0.16em;
@@ -620,7 +584,7 @@
             margin-bottom: 20px;
         }
 
-        .projects-title {
+        .section-title-italic {
             font-family: 'Playfair Display', serif;
             font-style: italic;
             font-size: clamp(52px, 7vw, 96px);
@@ -713,8 +677,7 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 36px;
-            height: 36px;
+            width: 36px; height: 36px;
             border-radius: 50%;
             border: 1.5px solid rgba(0,0,0,0.2);
             font-size: 14px;
@@ -740,8 +703,7 @@
         }
 
         .card-image img {
-            width: 100%;
-            height: 100%;
+            width: 100%; height: 100%;
             object-fit: cover;
             display: block;
             filter: grayscale(100%);
@@ -761,9 +723,9 @@
             pointer-events: none;
         }
 
-        /* ─────────────────────────────
-           BLOCK 4 — FOOTER
-        ───────────────────────────── */
+        /* ─────────────────────────────────────────
+           FOOTER
+        ───────────────────────────────────────── */
         .footer-section {
             background: #141414;
             color: #fff;
@@ -831,10 +793,10 @@
             position: absolute;
             inset: 0;
             background:
-                linear-gradient(to right, #141414 0%, #141414 8%, transparent 42%),
+                linear-gradient(to right,  #141414 0%, #141414 8%, transparent 42%),
                 linear-gradient(to bottom, #141414 0%, transparent 30%),
-                linear-gradient(to top, #141414 0%, transparent 30%),
-                linear-gradient(to left, #141414 0%, transparent 20%);
+                linear-gradient(to top,    #141414 0%, transparent 30%),
+                linear-gradient(to left,   #141414 0%, transparent 20%);
             pointer-events: none;
             z-index: 2;
         }
@@ -890,3 +852,109 @@
     </style>
 </head>
 <body>
+
+    <!-- ═══════════════════════════════════════
+         NAV
+    ═══════════════════════════════════════ -->
+    <nav>
+        <div class="nav-logo">AP</div>
+        <ul class="nav-links">
+            <li><a href="#projects">Кейсы</a></li>
+            <li><a href="#about">Обо мне</a></li>
+            <li><a href="#">Резюме</a></li>
+        </ul>
+        <a href="#footer" class="nav-contact">Связаться</a>
+    </nav>
+
+    <!-- ═══════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════ -->
+    <section class="hero">
+
+        <div class="hero-left">
+            <div class="hero-tag">UX/UI Designer</div>
+
+            <h1 class="hero-name">Anna<br>Plato<span>.</span>nova</h1>
+
+            <div class="hero-role">B2B Products · Web Apps</div>
+
+            <div class="hero-tags">
+                <span class="tag-pill">Figma</span>
+                <span class="tag-pill">Design Systems</span>
+                <span class="tag-pill">Research</span>
+            </div>
+
+            <div class="hero-divider"></div>
+
+            <p class="hero-desc">
+                Проектирую <strong>цифровые продукты</strong>,
+                которые решают реальные задачи бизнеса —
+                от концепции до готового интерфейса.
+            </p>
+
+            <div class="hero-actions">
+                <a href="#projects" class="btn-primary">
+                    Смотреть кейсы
+                    
+                        
+                    
+                </a>
+                <a href="#" class="btn-secondary">Скачать резюме</a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number">12<span>+</span></div>
+                    <div class="stat-label">Проектов</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">3<span>г</span></div>
+                    <div class="stat-label">Опыта</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">8<span>+</span></div>
+                    <div class="stat-label">Клиентов</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-right">
+            <div class="badge-float">
+                <div class="badge-dot"></div>
+                <span class="badge-text">Открыта к работе</span>
+            </div>
+
+            <div class="mockup-card card-1">
+                <div class="card-inner">
+                    <div class="card-bar full"></div>
+                    <div class="card-bar medium"></div>
+                    <div class="card-rect"></div>
+                    <div class="card-row">
+                        <div class="card-sq"></div>
+                        <div class="card-sq"></div>
+                        <div class="card-sq"></div>
+                    </div>
+                    <div class="card-bar short"></div>
+                </div>
+            </div>
+
+            <!-- Карточка 2 — средняя передняя -->
+            <div class="mockup-card card-2">
+                <div class="card-inner">
+                    <div class="card-bar medium"></div>
+                    <div class="card-rect"></div>
+                    <div class="card-bar short"></div>
+                    <div class="card-bar full"></div>
+                </div>
+            </div>
+
+            <!-- Карточка 3 — тёмная статистика -->
+            <div class="mockup-card card-3">
+                <div class="card-3-label">Conversion rate</div>
+                <div class="card-3-value">+34%</div>
+                <div class="card-3-sub">↑ после редизайна</div>
+            </div>
+
+        </div>
+
+    </section>
